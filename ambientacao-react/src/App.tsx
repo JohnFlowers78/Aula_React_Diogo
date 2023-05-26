@@ -1,5 +1,6 @@
 import Soma from "./components/Soma";
-import Subtracao from "./components/Subtracao";
+import Subtracao from "./components/Operacao";
+import Operacao from "./components/Operacao";
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
       <hr></hr>
 
       <Soma/>   {/* tudo que eu precisar tem de estar dentro de um elemento pai (div, no caso) */}
-      <Subtracao/>
+      <Operacao tipo="subtração"/>
     </div>
 );
 }

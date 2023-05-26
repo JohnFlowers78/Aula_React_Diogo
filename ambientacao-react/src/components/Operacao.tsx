@@ -1,20 +1,28 @@
 import { useState } from "react";
 
-function Subtracao(){          
+interface Props{
+  tipo: string
+}
+
+function Operacao(props: Props){          
 
     const [num1, setnumero1] = useState<any>()
     const [num2, setnumero2] = useState<any>()
     const [sub, setSubtracao] = useState<any>()
 
     function calcular(){              //esse  cara vai guardar dentro da variável subtração, o parse para fazer a conversão dos valores do que está dentro da variável 1 
-      setSubtracao(Number.parseInt(num1) - Number.parseInt(num2));          /* Toda vez que eu quiser usar um componente eu preciso de uma função */
-      console.log(sub);
+      if (props.tipo == "Subtração"){
+        setSubtracao(Number.parseInt(num1) - Number.parseInt(num2));
+      }else if(props.tipo == "Multiplicação"){
+        setSubtracao(Number.parseInt(num1) * Number.parseInt(num2));
+      }
+                /* Toda vez que eu quiser usar um componente eu preciso de uma função */
     }
 
   return (
     <div>
         <div>
-          <h1> Componente da subtração </h1>
+          <h1> Componente da {props.tipo} </h1>
         </div>
     <div>
         <label>Número 1:
@@ -41,4 +49,4 @@ function Subtracao(){
   );
 }
 
-export default Subtracao;
+export default Operacao;
