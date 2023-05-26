@@ -40,10 +40,10 @@ function Soma(){
                 <input type="text" onChange={escreverCaixaTexto2}/>
             </div>
             <div>
-                <button onClick={clicarNoBotao}>Somar</button>        {/* Ao digitar "on", você verá todos os eventos que um botão tem! */}
-                <br></br>
-                <span>Resultado: </span>
+                <button onClick={clicarNoBotao}>Calcular</button>        {/* Ao digitar "on", você verá todos os eventos que um botão tem! */}
+                <span>Resultado: {soma}</span>
             </div>
+            <hr></hr>
         </div>
     );
 }
